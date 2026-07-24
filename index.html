@@ -88,21 +88,27 @@
             </div>
         </div>
 
-        <div id="chatbot" class="oculto">
-            <div id="chatbotContenido">
-                <button id="btnCerrarChat" type="button" aria-label="Cerrar">
-                    ✕
-                </button>
-                <header class="cabecera">
-                    <h2>Chat de ayuda</h2>
-                </header>
-                <div class="respuesta"></div>
-                <div class="preguntar">
-                    <textarea name="pregunta" id="pregunta"></textarea>
-                    <button id="btnEnviar" type="button">Enviar</button>
-                </div>
-            </div>
+        <div id="chatbot" class="oculto" aria-hidden="true">
+    <div id="chatbotContenido" role="dialog" aria-modal="true" aria-labelledby="chatbotTitulo">
+        <button id="btnCerrarChat" type="button" aria-label="Cerrar chat">✕</button>
+
+        <header class="cabecera">
+            <h2 id="chatbotTitulo">Chat de ayuda</h2>
+        </header>
+
+        <div class="respuesta" aria-live="polite"></div>
+
+        <div class="preguntar">
+            <textarea
+                name="pregunta"
+                id="pregunta"
+                rows="2"
+                placeholder="Escribe tu pregunta..."
+            ></textarea>
+            <button id="btnEnviar" type="button">Enviar</button>
         </div>
+    </div>
+</div>
 
         <footer>
             <figure>

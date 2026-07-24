@@ -627,6 +627,42 @@ footer figcaption {
 }
 
 
+
+#chatbotContenido .respuesta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-msg {
+    max-width: 92%;
+}
+
+.chat-msg p {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    word-break: break-word;
+}
+
+.chat-bot p {
+    background: rgba(119, 88, 63, 0.1);
+    border: 1px solid rgba(119, 88, 63, 0.2);
+    color: var(--text-main);
+}
+
+.chat-user {
+    align-self: flex-end;
+}
+
+.chat-user p {
+    background: rgba(230, 191, 17, 0.16);
+    border: 1px solid rgba(230, 191, 17, 0.35);
+    color: var(--text-main);
+}
+
+
+
 @media (max-width: 960px) {
     main {
         flex-direction: column;
