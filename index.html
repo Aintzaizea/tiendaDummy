@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tienda Dummy</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <a href="#"><img src="img/logodummy.png" alt="logodummy" /></a>
+            <div class="iconosDcha">
+                <a href="#" title="Mi cuenta"><i data-lucide="user"></i></a>
+                <a href="#" title="Mi carrito"
+                    ><i data-lucide="shopping-cart"></i>
+                </a>
+                <a href="#" title="Te ayudamos" id="btnAyuda"
+                    ><i data-lucide="message-circle-question-mark"></i
+                ></a>
+            </div>
+        </header>
+
+        <main>
+            <aside id="filtro" aria-label="Filtros de productos">
+                <label class="filtro-campo" for="categoria">
+                    <select id="categoria">
+                        <option value="">Categorías</option>
+                    </select>
+                </label>
+
+                <label class="filtro-campo" for="precioMax">
+                    <span>Filtrar por precio</span>
+                    <input
+                        type="number"
+                        id="precioMax"
+                        min="0"
+                        placeholder="0"
+                    />
+                </label>
+
+                <label class="filtro-campo" for="nombre">
+                    <span>Buscar producto</span>
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Palabra clave"
+                    />
+                </label>
+
+                <div class="filtro-acciones">
+                    <button id="btnBuscar" type="button">🔍</button>
+                    <button id="btnTodos" type="button">Ver todos</button>
+                </div>
+            </aside>
+
+            <section id="catalogo" aria-label="Listado de productos">
+                <div id="productos" aria-live="polite"></div>
+
+                <div id="paginacion" aria-label="Paginación de productos">
+                    <button id="btnPrev" type="button">Anterior</button>
+                    <div
+                        id="paginasNumeros"
+                        aria-label="Seleccionar página"
+                    ></div>
+                    <span id="paginaInfo">Página 1 de 1</span>
+                    <button id="btnNext" type="button">Siguiente</button>
+                </div>
+            </section>
+        </main>
+        <div id="modal" class="oculto">
+            <div id="modalContenido">
+                <button id="btnCerrarModal" type="button" aria-label="Cerrar">
+                    ✕
+                </button>
+                <img id="modalImagen" src="" alt="" />
+                <h3 id="modalTitulo"></h3>
+                <p id="modalPrecio"></p>
+                <p id="modalDescripcion"></p>
+                <p id="modalCategoria"></p>
+            </div>
+        </div>
+
+        <div id="chatbot" class="oculto">
+            <div id="chatbotContenido">
+                <button id="btnCerrarChat" type="button" aria-label="Cerrar">
+                    ✕
+                </button>
+                <header class="cabecera">
+                    <h2>Chat de ayuda</h2>
+                </header>
+                <div class="respuesta"></div>
+                <div class="preguntar">
+                    <textarea name="pregunta" id="pregunta"></textarea>
+                    <button id="btnEnviar" type="button">Enviar</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <figure>
+                <figcaption>
+                    &copy; 2026 Dummy Store Todos los derechos reservados
+                </figcaption>
+            </figure>
+            <a
+                href="http://www.youtube.es"
+                title="YouTube"
+                class="logos"
+                target="_blank"
+                ><img src="img/1492718751-youtube_83605.svg" alt="youtube"
+            /></a>
+            <a
+                href="https://www.whatsapp.com/?lang=es"
+                title="WhatsApp"
+                class="logos"
+                target="_blank"
+                ><img src="img/whatsapp-black_100119.svg" alt="whatsapp"
+            /></a>
+        </footer>
+
+        <script src="js/main.js"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script>
+            lucide.createIcons();
+        </script>
+    </body>
+</html>
